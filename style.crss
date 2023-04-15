@@ -1,0 +1,176 @@
+#navbar{
+    @: d-flex ai-center jc-center w-100 py-3 bg-100 bg-op-25 back-blur-3 top-0 pos-st;
+}
+#navContainer{
+    @: w-100 d-flex ai-center jc-between;
+    md: max-w-75;
+}
+#brand{
+    @: d-flex ai-center color-900;
+}
+.tab{
+    @: mx-3;
+}
+#brandTxt{
+    @: fw-bold fs-5;
+}
+#navAllLinks{
+    @: d-flex;
+}
+.navLink{
+    @: px-3 color-500 delay-3;
+    hover: move-down-1;
+}
+#hero{
+    @: w-100 min-h-50 d-flex flex-column ai-center jc-center;
+}
+#heroBtn{
+    @: bg-warning mt-5 px-5 py-3 fs-3 color-900 delay-3;
+    hover: move-down-1 bg-warning-light;
+}
+#title{
+    @: fs-h6;
+}
+#titleDeco{
+    @: color-danger;
+}
+#subTitle{
+    @: w-75 color-500 text-align-center mt-3 fs-5;
+    md: max-w-50;
+    lg: max-w-25;
+}
+#intro{
+    @: bg-warning color-700 fs-6 w-100 py-5 d-flex flex-column ai-center;
+}
+#introHdr{
+    @: color-primary w-75 mb-3;
+    md: w-50;
+}
+#introTxt{
+    @: w-75 px-3 fs-3;
+    md: w-50 fs-4;
+    lg: fs-5;
+    xl: fs-6;
+}
+.highlight{
+    @: color-600;
+}
+#funFact{
+    @: w-100 d-flex jc-center my-3;
+}
+#funFactDiv{
+    @: w-80 bw-2 round-3 bg-success-light border-success-dark p-3 d-flex flex-column;
+    md: w-50;
+}
+#funFactHdr{
+    @: fs-h1 mb-3 mx-a;
+}
+#funFactTxt{
+    @: fs-5 text-align-center w-100 color-600;
+}
+#oview{
+    @: w-100 my-5 d-flex flex-column ai-center;
+}
+.oviewHdr{
+    @: w-75 m-a mt-5 color-primary-dark;
+}
+.oviewContainer{
+    @: w-75 mx-a d-flex flex-column;
+    md: flex-row flex-wrap;
+}
+.oviewDiv{
+    @: w-100 p-2;
+    md: min-w-40 max-w-45;
+}
+.oviewDivHdr{
+    @: color-success-dark my-3 ;
+}
+#dev{
+    @: d-flex ai-center jc-center w-100;
+}
+#devContainer{
+    @: w-100 d-flex flex-column jc-center ai-center bw-top-1 border-200;
+    md: w-75 flex-row;
+}
+#devLeft{
+    @: w-75 d-flex ai-center jc-center p-3;
+    md: w-50;
+}
+#devRight{
+    @: w-50 p-3;
+}
+#devHdr{
+    @: color-primary mb-4;
+}
+#devTxt{
+    @: fs-6 mb-2;
+}
+#devMail{
+    @: fs-5 color-primary-dark text-deco-underline;
+}
+#footer{
+    @: w-100 bg-200 py-3 d-flex jc-center ai-center;
+}
+#footerTxt{
+    @: color-500;
+}
+#footerLink{
+    @: color-primary-dark text-deco-underline mx-2;
+}
+.downloadTitle{
+    @: w-100 fw-light text-align-center my-5 color-success-dark;
+}
+#download{
+    @: w-100 d-flex jc-center my-5;
+}
+#downloadContainer{
+    @: w-100 d-flex flex-column;
+    md: w-75 flex-row;
+}
+.downloadCol{
+    @: w-90 p-2 d-flex flex-column ai-center;
+    md: w-30;
+}
+.downloadHdr{
+    @: my-5;
+}
+.downloadLink{
+    @: color-primary-dark text-deco-underline mb-3 delay-3;
+    hover: move-right-2 color-success-dark;
+}
+#downloadInfo{
+    @: w-100 text-align-center color-400 my-5;
+}
+#downloadOld{
+    @: color-primary-dark text-deco-underline;
+}
+.outerDiv{
+    @: w-100 d-flex jc-center mb-5;
+}
+.innerDiv{
+    @: w-75;
+}
+.installStep{
+    @: mt-3 color-500 fs-4;
+}
+.installHdr{
+    @: mt-5 mb-3 fs-h1 fw-light;
+}
+.code{
+    @: bg-200 color-500 p-3 m-3 round-3 bw-1 border-300;
+}
+.info{
+    @: color-warning-dark p-3 m-3 round-3 bw-1 border-warning-dark;
+}
+#docTitle{
+    @: fs-h6 color-success-dark my-5 text-align-center;
+}
+.h2Hdr{
+    @: color-primary mb-3 mt-5;
+}
+.h3Hdr{
+    @: color-success-dark mb-2;
+}
+.paragraph{
+    @: fs-4;
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Crossandra</title>
+    <link href="crossandra.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        hr {
+            min-width: 100%;
+            margin-bottom: 1rem;
+            border: 1px solid #8884;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: goldenrod;
+        }
+
+        h5 {
+            color: teal;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="navContainer">
+            <a id="brand" href="index.html">
+                <img class="tab" src="img/logo.png" width="32" height="32" />
+                <p id="brandTxt">Crossandra</p>
+            </a>
+            <div id="navAllLinks">
+                <a class="navLink" href="download.html">Download</a>
+                <a class="navLink" href="doc.html">Document</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="docTitle">Crossandra v0.0.3 Documentation</h1>
+
+    <div class="outerDiv">
+        <div class="innerDiv paragraph">
+            <h2 class="h2Hdr">Syntax</h2>
+            <p>There is only one syntax in crossandra language. That's make it so easy to learn and remember. Here is
+                the syntax:</p>
+            <br />
+            <p>
+                &lt;identifier&gt;{<br />
+                <span class="tab"></span>&lt;state&gt;: &lt;property&gt; &lt;property&gt;;<br />
+                <span class="tab"></span>&lt;state&gt;: &lt;property&gt; &lt;property&gt;;<br />
+                <span class="tab"></span>&lt;state&gt;: &lt;property&gt; &lt;property&gt;;<br />
+                }
+            </p>
+            <h2 class="h2Hdr">Identifier</h2>
+            <p>Crossandra support only two kinds of identifier: ID based & Class based. ID based identifiers starts with
+                a (#) symbol and class based identifiers starts with a (.) symbol. Identifiers name can only contain
+                [a-zA-Z0-9], and the first letter must have to be [a-zA-Z]. Each identifier have to be unique.</p>
+            <h2 class="h2Hdr">State</h2>
+            <p>Crossandra use 10 different types of states. States helps us to defind styles for small screen, large
+                screen, dark mode etc.</p>
+            <br />
+            <ul>
+                <li><strong>@:</strong> This state is used to defind default styles.</li>
+                <li><strong>sm:</strong> This state is used to define styles for small screen.</li>
+                <li><strong>md:</strong> This state is used to defind styles for medium screen.</li>
+                <li><strong>lg:</strong> This state is used to define styles for large screen.</li>
+                <li><strong>xl:</strong> This state is used to defind styles for extra large screen.</li>
+                <li><strong>hover:</strong> This state is used to defind styles for hover state.</li>
+                <li><strong>focus:</strong> This state is used to define styles for focus state.</li>
+                <li><strong>active:</strong> This state is used to define styles for active class.</li>
+                <li><strong>deactive:</strong> This state is used to defind styles for deactive class.</li>
+                <li><strong>dark:</strong> This state is used to define styles for dark mode.</li>
+            </ul>
+            <h2 class="h2Hdr">Properties</h2>
+            <p>Crossandra use few number of CSS properties to make the design more consistent and light weight. It's
+                reduce the decision making time, because now you have to deal with few number of properties.
+            </p>
+            <br />
+            <h3 class="h3Hdr">Dimension properties</h3>
+            <ul>
+                <li><strong>width:</strong> There are total 20 width properties, starting from w-5 to w-100, each step
+                    is 5%. That's mean w-35, w-75, w-50 all are valid, but w-32, w-88 these are not valid.</li>
+                <li><strong>min-width:</strong> Same as width property, but the porperty name has a prefix 'min-'. For
+                    example: min-w-50, min-w-75 etc.</li>
+                <li><strong>max-width:</strong> Same as width property, but the porperty name has a prefix 'max-'. For
+                    example: min-w-50, min-w-75 etc.</li>
+                <hr />
+                <li><strong>height:</strong> Same as width property, but the porperty name starts with 'h-'. For
+                    example: h-50, h-75 etc.</li>
+                <li><strong>min-height:</strong> Same as height property, but the porperty name has a prefix 'min-'. For
+                    example: min-h-50, min-h-75 etc.</li>
+                <li><strong>max-height:</strong> Same as height property, but the porperty name has a prefix 'max-'. For
+                    example: max-h-50, max-h-75 etc.</li>
+                <hr />
+                <li><strong>overflow:</strong> This property is used to define overflow behaviour. It's variants are:
+                    "overflow-auto", "overflow-hide", "overflow-scroll", "overflow-visible".</li>
+                <li><strong>overflow-x:</strong> This property is used to define overflow-x behaviour. It's variants
+                    are:
+                    "overflow-x-auto", "overflow-x-hide", "overflow-x-scroll", "overflow-x-visible".</li>
+                <li><strong>overflow-y:</strong> This property is used to define overflow-y behaviour. It's variants
+                    are:
+                    "overflow-y-auto", "overflow-y-hide", "overflow-y-scroll", "overflow-y-visible".</li>
+                <hr />
+                <li><strong>object-fit:</strong> This property is used to define the object-fit behaviour. It's variants
+                    are: "fit-contain", "fit-cover", "fit-fill", "fit-scale"</li>
+            </ul>
+            <h3 class="h3Hdr">Margin properties</h3>
+            <ul>
+                <li><strong>margin:</strong> There are total 7 margin properties, and the variants are: "m-0", "m-1",
+                    "m-2", "m-3", "m-4", "m-5", "m-a".</li>
+                <li><strong>margin-x:</strong> There are total 7 margin x properties, and the variants are: "mx-0",
+                    "mx-1", "mx-2", "mx-3", "mx-4", "mx-5", "mx-a".</li>
+                <li><strong>margin-y:</strong> There are total 7 margin y properties, and the variants are: "my-0",
+                    "my-1", "my-2", "my-3", "my-4", "my-5", "my-a".</li>
+                <li><strong>margin-top:</strong> There are total 7 margin top properties, and the variants are:
+                    "mt-0", "mt-1", "mt-2", "mt-3", "mt-4", "mt-5", "mt-a".</li>
+                <li><strong>margin-left:</strong> There are total 7 margin left properties, and the variants are:
+                    "ml-0", "ml-1", "ml-2", "ml-3", "ml-4", "ml-5", "ml-a".</li>
+                <li><strong>margin-right:</strong> There are total 7 margin right properties, and the variants are:
+                    "mr-0", "mr-1", "mr-2", "mr-3", "mr-4", "mr-5", "mr-a".</li>
+                <li><strong>margin-bottom:</strong> There are total 7 margin bottom properties, and the variants are:
+                    "mb-0", "mb-1", "mb-2", "mb-3", "mb-4", "mb-5", "mb-a".</li>
+            </ul>
+            <h3 class="h3Hdr">Padding properties</h3>
+            <ul>
+                <li><strong>padding:</strong> There are total 7 padding properties, and the variants are: "p-0", "p-1",
+                    "p-2", "p-3", "p-4", "p-5", "p-a".</li>
+                <li><strong>padding-x:</strong> There are total 7 padding x properties, and the variants are: "px-0",
+                    "px-1", "px-2", "px-3", "px-4", "px-5", "px-a".</li>
+                <li><strong>padding-y:</strong> There are total 7 padding y properties, and the variants are: "py-0",
+                    "py-1", "py-2", "py-3", "py-4", "py-5", "py-a".</li>
+                <li><strong>padding-top:</strong> There are total 7 padding top properties, and the variants are:
+                    "pt-0", "pt-1", "pt-2", "pt-3", "pt-4", "pt-5", "pt-a".</li>
+                <li><strong>padding-left:</strong> There are total 7 padding left properties, and the variants are:
+                    "pl-0", "pl-1", "pl-2", "pl-3", "pl-4", "pl-5", "pl-a".</li>
+                <li><strong>padding-right:</strong> There are total 7 padding right properties, and the variants are:
+                    "pr-0", "pr-1", "pr-2", "pr-3", "pr-4", "pr-5", "pr-a".</li>
+                <li><strong>padding-bottom:</strong> There are total 7 padding bottom properties, and the variants are:
+                    "pb-0", "pb-1", "pb-2", "pb-3", "pb-4", "pb-5", "pb-a".</li>
+            </ul>
+            <h3 class="h3Hdr">Location properties</h3>
+            <ul>
+                <li><strong>position:</strong> There are total 5 position properties, and the variants are: "pos-rl"
+                    (position relative), "pos-ab" (position absolute), "pos-fx" (position fixed), "pos-st" (position
+                    static).</li>
+                <li><strong>top:</strong> Position top starts from 0% to 100%, with step 25%. "top-0", "top-25",
+                    "top-50", "top-75", "top-100".</li>
+                <li><strong>left:</strong> Position left starts from 0% to 100%, with step 25%. "left-0", "left-25",
+                    "left-50", "left-75", "left-100".</li>
+                <li><strong>right:</strong> Position right starts from 0% to 100%, with step 25%. "right-0", "right-25",
+                    "right-50", "right-75", "right-100".</li>
+                <li><strong>bottom:</strong> Position bottom starts from 0% to 100%, with step 25%. "bottom-0",
+                    "bottom-25", "bottom-50", "bottom-75", "bottom-100".</li>
+                <li><strong>z-index:</strong> There are total 6 z-index properties, and the variants are:
+                    "z-0", "z-1", "z-2", "z-3", "z-4", "z-5".</li>
+            </ul>
+            <h3 class="h3Hdr">Color properties</h3>
+            <h4>Background colors</h4>
+            <ul>
+                <li><strong>grey-scale colors:</strong> There are total 9 grey-scale colors starting from bg-100 to
+                    bg-900, where each step is 100. "bg-100", "bg-200", "bg-300", "bg-400", "bg-500", "bg-600",
+                    "bg-700", "bg-800", "bg-900".</li>
+                <li><strong>palette colors:</strong> There are total 7 palette colors. These are: "bg-primary",
+                    "bg-secondary", "bg-info", "bg-success", "bg-warning", "bg-danger", "bg-disable".</li>
+                <li><strong>light palette colors:</strong> Same as palette colors with a suffix of "-light". For
+                    example: bg-primary-light, bg-secondary-light.</li>
+                <li><strong>dark palette colors:</strong> Same as palette colors with a suffix of "-dark". For
+                    example: bg-primary-dark, bg-secondary-dark.</li>
+            </ul>
+            <hr />
+            <h4>Text colors</h4>
+            <ul>
+                <li><strong>grey-scale colors:</strong> There are total 9 grey-scale colors starting from color-100 to
+                    color-900, where each step is 100. "color-100", "color-200", "color-300", "color-400", "color-500",
+                    "color-600", "color-700", "color-800", "color-900".</li>
+                <li><strong>palette colors:</strong> There are total 7 palette colors. These are: "color-primary",
+                    "color-secondary", "color-info", "color-success", "color-warning", "color-danger", "color-disable".
+                </li>
+                <li><strong>light palette colors:</strong> Same as palette colors with a suffix of "-light". For
+                    example: color-primary-light, color-secondary-light.</li>
+                <li><strong>dark palette colors:</strong> Same as palette colors with a suffix of "-dark". For
+                    example: color-primary-dark, color-secondary-dark.</li>
+            </ul>
+            <hr />
+            <h4>Border colors</h4>
+            <ul>
+                <li><strong>grey-scale colors:</strong> There are total 9 grey-scale border colors starting from
+                    border-100 to border-900, where each step is 100. "border-100", "border-200", "border-300",
+                    "border-400", "border-500", "border-600", "border-700", "border-800", "border-900".</li>
+                <li><strong>palette colors:</strong> There are total 7 palette colors. These are: "border-primary",
+                    "border-secondary", "border-info", "border-success", "border-warning", "border-danger",
+                    "border-disable".
+                </li>
+                <li><strong>light palette colors:</strong> Same as palette colors with a suffix of "-light". For
+                    example: border-primary-light, border-secondary-light.</li>
+                <li><strong>dark palette colors:</strong> Same as palette colors with a suffix of "-dark". For
+                    example: border-primary-dark, border-secondary-dark.</li>
+            </ul>
+            <hr />
+            <h4>Opacity</h4>
+            <ul>
+                <li><strong>background opacity:</strong> There are total 5 variants: "bg-op-0", "bg-op-25",
+                    "bg-op-50", "bg-op-75", "bg-op-100".</li>
+                <li><strong>text opacity:</strong> There are total 5 variants: "color-op-0", "color-op-25",
+                    "color-op-50", "color-op-75", "color-op-100".</li>
+                <li><strong>border opacity:</strong> There are total 5 variants: "border-op-0", "border-op-25",
+                    "border-op-50", "border-op-75", "border-op-100".</li>
+            </ul>
+            <h4>Background gradient</h4>
+            <h5>Light gradient</h5>
+            <ul>
+                <li><strong>grad-light-top-*</strong> Use the current background color as starting color and the light
+                    version of that color as end color. The gradient direction is to top. This has 5 variants which
+                    decide the contrast of the end color: "grad-light-top-1", "grad-light-top-2", "grad-light-top-3",
+                    "grad-light-top-4", "grad-light-top-5".
+                </li>
+                <li><strong>grad-light-left-*</strong> Use the current background color as starting color and the light
+                    version of that color as end color. The gradient direction is to left. This has 5 variants which
+                    decide the contrast of the end color: "grad-light-left-1", "grad-light-left-2", "grad-light-left-3",
+                    "grad-light-left-4", "grad-light-left-5".
+                </li>
+                <li><strong>grad-light-right-*</strong> Use the current background color as starting color and the light
+                    version of that color as end color. The gradient direction is to right. This has 5 variants which
+                    decide the contrast of the end color: "grad-light-right-1", "grad-light-right-2",
+                    "grad-light-right-3", "grad-light-right-4", "grad-light-right-5".
+                </li>
+                <li><strong>grad-light-bottom-*</strong> Use the current background color as starting color and the
+                    light
+                    version of that color as end color. The gradient direction is to bottom. This has 5 variants which
+                    decide the contrast of the end color: "grad-light-bottom-1", "grad-light-bottom-2",
+                    "grad-light-bottom-3", "grad-light-bottom-4", "grad-light-bottom-5".
+                </li>
+            </ul>
+            <h5>Dark gradient</h5>
+            <ul>
+                <li><strong>grad-dark-top-*</strong> Use the current background color as starting color and the dark
+                    version of that color as end color. The gradient direction is to top. This has 5 variants which
+                    decide the contrast of the end color: "grad-dark-top-1", "grad-dark-top-2", "grad-dark-top-3",
+                    "grad-dark-top-4", "grad-dark-top-5".
+                </li>
+                <li><strong>grad-dark-left-*</strong> Use the current background color as starting color and the dark
+                    version of that color as end color. The gradient direction is to left. This has 5 variants which
+                    decide the contrast of the end color: "grad-dark-left-1", "grad-dark-left-2", "grad-dark-left-3",
+                    "grad-dark-left-4", "grad-dark-left-5".
+                </li>
+                <li><strong>grad-dark-right-*</strong> Use the current background color as starting color and the dark
+                    version of that color as end color. The gradient direction is to right. This has 5 variants which
+                    decide the contrast of the end color: "grad-dark-right-1", "grad-dark-right-2",
+                    "grad-dark-right-3", "grad-dark-right-4", "grad-dark-right-5".
+                </li>
+                <li><strong>grad-dark-bottom-*</strong> Use the current background color as starting color and the dark
+                    version of that color as end color. The gradient direction is to bottom. This has 5 variants which
+                    decide the contrast of the end color: "grad-dark-bottom-1", "grad-dark-bottom-2",
+                    "grad-dark-bottom-3", "grad-dark-bottom-4", "grad-dark-bottom-5".
+                </li>
+            </ul>
+            <h3 class="h3Hdr">Border radius properties</h3>
+            <ul>
+                <li><strong>round-*:</strong> Set border radius to all 4 corners. Variants: "round-0", "round-1",
+                    "round-2",
+                    "round-3", "round-4", "round-5".</li>
+                <li><strong>round-top-*:</strong> Set border radius to top 2 corners. Variants: "round-top-0",
+                    "round-top-1", "round-top-2", "round-top-3", "round-top-4", "round-top-5".</li>
+                <li><strong>round-left-*:</strong> Set border radius to left 2 corners. Variants: "round-left-0",
+                    "round-left-1", "round-left-2", "round-left-3", "round-left-4", "round-left-5".</li>
+                <li><strong>round-right-*:</strong> Set border radius to right 2 corners. Variants: "round-right-0",
+                    "round-right-1", "round-right-2", "round-right-3", "round-right-4", "round-right-5".</li>
+                <li><strong>round-bottom-*:</strong> Set border radius to bottom 2 corners. Variants: "round-bottom-0",
+                    "round-bottom-1", "round-bottom-2", "round-bottom-3", "round-bottom-4", "round-bottom-5".</li>
+                <li><strong>round-top-left-*:</strong> Set border radius to the top left corner. Variants:
+                    "round-top-left-0", "round-top-left-1", "round-top-left-2", "round-top-left-3", "round-top-left-4",
+                    "round-top-left-5".</li>
+                <li><strong>round-top-right-*:</strong> Set border radius to the top right corner. Variants:
+                    "round-top-right-0", "round-top-right-1", "round-top-right-2", "round-top-right-3",
+                    "round-top-right-4",
+                    "round-top-right-5".</li>
+                <li><strong>round-bottom-left-*:</strong> Set border radius to the bottom left corner. Variants:
+                    "round-bottom-left-0", "round-bottom-left-1", "round-bottom-left-2", "round-bottom-left-3",
+                    "round-bottom-left-4", "round-bottom-left-5".</li>
+                <li><strong>round-bottom-right-*:</strong> Set border radius to the bottom right corner. Variants:
+                    "round-bottom-right-0", "round-bottom-right-1", "round-bottom-right-2", "round-bottom-right-3",
+                    "round-bottom-right-4", "round-bottom-right-5".</li>
+            </ul>
+            <h3 class="h3Hdr">Border width properties</h3>
+            <ul>
+                <li><strong>bw-*</strong>Set border with of all 4 sides. Variants: "bw-0", "bw-1", "bw-2", "bw-3",
+                    "bw-4", "bw-5".</li>
+                <li><strong>bw-x-*</strong>Set border with of horizontal sides. Variants: "bw-x-0", "bw-x-1", "bw-x-2",
+                    "bw-x-3", "bw-x-4", "bw-x-5".</li>
+                <li><strong>bw-y-*</strong>Set border with of vertical sides. Variants: "bw-y-0", "bw-y-1", "bw-y-2",
+                    "bw-y-3", "bw-y-4", "bw-y-5".</li>
+                <li><strong>bw-top-*</strong>Set border with of top side. Variants: "bw-top-0", "bw-top-1", "bw-top-2",
+                    "bw-top-3", "bw-top-4", "bw-top-5".</li>
+                <li><strong>bw-left-*</strong>Set border with of left side. Variants: "bw-left-0", "bw-left-1",
+                    "bw-left-2", "bw-left-3", "bw-left-4", "bw-left-5".</li>
+                <li><strong>bw-right-*</strong>Set border with of right side. Variants: "bw-right-0", "bw-right-1",
+                    "bw-right-2", "bw-right-3", "bw-right-4", "bw-right-5".</li>
+                <li><strong>bw-bottom-*</strong>Set border with of bottom side. Variants: "bw-bottom-0", "bw-bottom-1",
+                    "bw-bottom-2", "bw-bottom-3", "bw-bottom-4", "bw-bottom-5".</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p id="footerTxt">
+            ©2022 Subho Basak
+        </p>
+        <a id="footerLink" target="_blank" href="https://subhobasak.github.io/SubhoBasak/">Personal Website</a>
+    </footer>
+</body>
+
+</html>

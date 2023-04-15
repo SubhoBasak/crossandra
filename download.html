@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Crossandra</title>
+    <link href="crossandra.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="navContainer">
+            <a id="brand" href="index.html">
+                <img class="tab" src="img/logo.png" width="32" height="32" />
+                <p id="brandTxt">Crossandra</p>
+            </a>
+            <div id="navAllLinks">
+                <a class="navLink" href="download.html">Download</a>
+                <a class="navLink" href="doc.html">Document</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="downloadTitle">Download Latest Version <strong>0.0.3</strong></h1>
+    <div id="download">
+        <div id="downloadContainer">
+            <div class="downloadCol">
+                <img class="downloadImg" src="img/win.png" alt="WindowsOS" width="128" height="128" />
+                <h2 class="downloadHdr">Windows</h2>
+                <a class="downloadLink">Windows 64bit</a>
+                <a class="downloadLink">Windows 32bit</a>
+            </div>
+            <div class="downloadCol">
+                <img class="downloadImg" src="img/linux.png" alt="LinuxOS" width="128" height="128" />
+                <h2 class="downloadHdr">Linux</h2>
+                <a class="downloadLink">Linux x86 64bit</a>
+                <a class="downloadLink">Linux x86 32bit</a>
+                <a class="downloadLink">Linux arm 64bit</a>
+                <a class="downloadLink">Linux arm 32bit</a>
+            </div>
+            <div class="downloadCol">
+                <img class="downloadImg" src="img/mac.png" alt="MacOS" width="128" height="128" />
+                <h2 class="downloadHdr">Mac OS</h2>
+                <a class="downloadLink">Mac OS arm</a>
+                <a class="downloadLink">Mac OS x86</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="funFact">
+        <div id="funFactDiv">
+            <p id="funFactHdr">Fun Fact!</p>
+            <p id="funFactTxt">Initial plan was to write the crossandra compiler in python. But to build a portable
+                executable file and Go lang's cross-compilation feature, ultimately Go lang was selected to write the
+                compiler.</p>
+        </div>
+    </div>
+
+    <p id="downloadInfo">Looking for an old version? Download from the <a id="downloadOld" target="_blank">github</a>
+    </p>
+
+    <h2 class="downloadTitle">Installation</h2>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <h3 class="installHdr">Windows</h3>
+            <p class="installStep">1. Download & extract the zip file.</p>
+            <p class="installStep">2. Create a folder named 'Crossandra'. Recommended in C:\ drive.</p>
+            <p class="installStep">3. Move the crss.exe file inside the extracted zip folder to the newly created
+                Crossandra folder.</p>
+            <p class="installStep">4. Add the newly created Crossandra folder to the environmnet variable.</p>
+            <p class="installStep">5. Open up a new powershell or CMD window and type crss.exe. It should show "No input
+                file!". If it is, then congratulation, your installation is successfull.</p>
+            <p class="installStep">6. Otherwise check the environmnet
+                variable and restart your system and try agian.</p>
+            <h3 class="installHdr">Linux & Mac OS</h3>
+            <p class="installStep">1. Download & extract the zip file.</p>
+            <p class="installStep">2. Open the extracted folder in the terminal.</p>
+            <p class="installStep">3. Run the following command the allow the installation script to execute.</p>
+            <p class="code">chmod 777 install.sh</p>
+            <p class="installStep">4. Now run the installation script by entering the following command.</p>
+            <p class="code">./install.sh</p>
+            <p class="installStep">5. Now type 'crss' in the terminal and hit enter. It should show "No input
+                file!". If it is, then congratulation, your installation is successfull.</p>
+            <p class="installStep">6. Otherwise restart your system and try agian.</p>
+            <h3 class="installHdr">VSCode extension</h3>
+            <p class="installStep">1. Open VSCode and navigate to extension.</p>
+            <p class="installStep">2. Search for "Crossandra".</p>
+            <p class="installStep">3. Install the extension with the crossandra logo and developer name "Subho Basak".
+            </p>
+            <p class="info"><strong>Note:</strong> This is not the compiler, it's just a syntax highlighter for VSCode.
+                It's an optional step and can be ignored if you are not using VSCode.</p>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p id="footerTxt">
+            ©2022 Subho Basak
+        </p>
+        <a id="footerLink" target="_blank" href="https://subhobasak.github.io/SubhoBasak/">Personal Website</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Crossandra</title>
+    <link href="crossandra.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="navContainer">
+            <a id="brand" href="index.html">
+                <img class="tab" src="img/logo.png" width="32" height="32" />
+                <p id="brandTxt">Crossandra</p>
+            </a>
+            <div id="navAllLinks">
+                <a class="navLink" href="download.html">Download</a>
+                <a class="navLink" href="doc.html">Document</a>
+            </div>
+        </div>
+    </nav>
+    <section id="hero">
+        <h1 id="title"><span id="titleDeco">@</span>Crossandra</h1>
+        <p id="subTitle">A compiled style language to optimize your UI performence.</p>
+        <a id="heroBtn" href="doc.html">Get Started</a>
+    </section>
+    <section id="intro">
+        <h2 id="introHdr">Introduction</h2>
+        <p id="introTxt">
+            Crossandra is a closed source, free to use <i class="highlight">(commercially & personally)</i> compiled
+            style langauge, that
+            helps
+            you to style your web app fast and easily. It's also helps you to add dark theme and responsiveness to your
+            design with minimum effort. The crossandra compiler use many iteration of checking to find the bugs as well
+            as
+            scope of optimization. It use <i class="highlight">virtual box property</i> to find out the ultimate out
+            come and then suggest you
+            the optimization options what will result the same output with minimum cost.
+        </p>
+    </section>
+    <div id="funFact">
+        <div id="funFactDiv">
+            <p id="funFactHdr">Fun Fact!</p>
+            <p id="funFactTxt">This website is also designed using crossandra v0.0.3.</p>
+        </div>
+    </div>
+    <section id="oview">
+        <h2 class="oviewHdr">Overview</h2>
+        <div class="oviewContainer">
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Keyword checking</h3>
+                <p>During the compile time it will check if all the keyword lies inside the source code are valid or
+                    not.<br /><br />For example, you write 'my-custom-property' in any style block. That will show an
+                    error that
+                    'my-custom-property' is not a valid keyword.<br /><br /> Thus your code will be completely
+                    <strong>dead code
+                        free</strong> unlike
+                    css.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Duplicate property checking</h3>
+                <p>This will also check if you write same property for the same element multiple time or
+                    not.<br /><br />For example, you write 'min-w-50' two or tree or 'N' number of times. Then the
+                    compiler will give an error that you wrote 'min-w-50' for N times.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Duplicate state checking</h3>
+                <p>If you use same set of properties for multiple states it will give you error to remove the low
+                    priority state.<br /><br />For example you wrote 'color-primary' & 'border-primary-dark' for the
+                    default state and on hover state you also wrote the same properties, 'color-primary' &
+                    'border-primary-dark'.<br /><br />So ultimately the hover state became useless for this case, that's
+                    why compiler will ask you to remove it.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Duplicate block checking</h3>
+                <p>If you write exact same block with different name for multiple time, then the compiler will ask you
+                    to merge them as one to minimize the code size.<br /><br />For example, you write a block #myButton
+                    with 'm-1', 'p-2', 'round-3' & 'delay-1' as default property and 'move-up-1' as hover state
+                    property. Unknowingly you write the same set of properties for another block
+                    #PrimaryButton.<br /><br />If two blocks contain same properties then there is no meaning to keep
+                    both of them and increase the size and reduce the performence.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Conflict checking</h3>
+                <p>The crossandra compiler will give an error if you write different variant of same property that are
+                    conflicting with each other.<br /><br />Like, you write 'w-50' & 'w-75' for the same element at same
+                    state.<br /><br />The compiler will give you the error. Now you can decide what to do.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Value optimization</h3>
+                <p>To optimize the ultimate CSS, crossandra compiler will use the virtual box property of CSS to
+                    generate the current outcome and recommend the optimum way to get the exact same
+                    outcome.<br /><br />
+                    For example, you write 'mt-3', 'mb-3', 'ml-2', 'mr-2'. As you can guess, the compiler will suggest
+                    you to use only 'my-3' & 'mx-2' instead.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Property scope limitation</h3>
+                <p>To keep your design consisten crossandra compiler limit the scope of each property. Let's understand
+                    it with an example:<br /><br />
+                    You can set the default color of a button as 'color-primary' and in hover state
+                    'color-primary-dark'. But you can not change the color in media query states (sm, md, lg, xl).
+                    Ultimately your button color will be same for each screen size, but can be different for other
+                    states.<br /><br />
+                    By the same way you can only change the margin, padding and all the sizing related properties only
+                    in media query states (sm, md, lg, xl). You cannot change margin on hover or focus or dark state.
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Identifier name checking</h3>
+                <p>Long chaining in CSS is very expensive and future update may easily break your design. Like, .navbar
+                    .navbar-brand .navbar-brand-img img {...}<br /><br />
+                    To solve this problem crossandra restricted the chaining and use unique identifiers. It allow only
+                    two kind of identifiers, ID based & class based.<br /><br />
+                    There is also naming constrains, each Identifier name can contain only [a-zA-Z0-9] and first letter
+                    must be [a-zA-Z]. Ultimately it force you to use <strong>Camel Case</strong> or <strong>Pascal
+                        Case</strong>. Because these can hold same value in more compact way. For example, ProfileImage
+                    is 12 characters long, but profile_image (Snake Case) is 13 characters long.
+                </p>
+            </div>
+        </div>
+        <h2 class="oviewHdr">Under the hood</h2>
+        <div class="oviewContainer">
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Common state merging</h3>
+                <p>If two or more blocks container all same states and properties then compiler will ask you to merge
+                    them. But if multiple blocks contain only few numbers of common states, then during the output
+                    generation the compiler will automatically merge them by maintaining the same output.<br /><br />For
+                    example, #CardA contain 'm-3', 'round-3', 'p-2' as default properties & 'w-50' for media query
+                    state sm. On the other hand #CardB also contain 'm-3', 'round-3', 'p-2' as default properties and
+                    don't contain any media query state, or suppose contain media query state with some different value,
+                    'w-25'. In both case both of the blocks are different, just the default properties are same. So the
+                    compiler will internally merge them like that:<br /><br />
+                    #CardA, #CardB { m-3, round-3, p-2 }<br /><br />
+                    MediaQuery(SM){<br />
+                    #CardA{ w-50 }<br />
+                    #CardB{ w-25 }<br />
+                    }
+                </p>
+            </div>
+            <div class="oviewDiv">
+                <h3 class="oviewDivHdr">Shorthand syntax</h3>
+                <p>Crossandra use shorthand CSS syntax to minimize the code size by maintaining the exact same
+                    output.<br /><br />For example, you write mt-3 mb-2 ml-1 mr-4, it will generate CSS like that-
+                    margin: 3unit 4unit 2unit 1unit;<br /><br />
+                    Crossandra only accepts 6digit hex code for colors, that's give it ability to replace the color code
+                    with shorthand syntax if possible.<br /><br />
+                    For example, you set primary color as #1188ff. During CSS generation, it will replace the hex code
+                    with #18f and for the alpha channel, if the color contain #1188ff33, then it will replace it with
+                    #18f3.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="dev">
+        <div id="devContainer">
+            <div id="devLeft">
+                <img src="img/subho.jpeg" alt="Subho" width="360" height="360" />
+            </div>
+            <div id="devRight">
+                <h2 id="devHdr">Developer</h2>
+                <p id="devTxt">Subho Basak</p>
+                <a id="devMail" href="mailto:subhobasak50@gmail.com">subhobasak50@gmail.com</a>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <p id="footerTxt">
+            ©2022 Subho Basak
+        </p>
+        <a id="footerLink" target="_blank" href="https://subhobasak.github.io/SubhoBasak/">Personal Website</a>
+    </footer>
+</body>
+
+</html>
